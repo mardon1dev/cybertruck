@@ -1,0 +1,281 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/manrope-v15-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/manrope-v15-latin-600.woff2') format('woff2');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.container{
+    max-width: 1190px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    background: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+#header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+.header-img{
+    max-width: 400px;
+    width: 100%;
+}
+#hero{
+    width: 100%;
+    height: 900px;
+    background-image: url("../images/desctop-bg-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero{
+    padding-top: 213px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero-title{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32.78px;  
+    color: rgba(0, 0, 0, 1);  
+    text-align: center;
+}
+.hero-button{
+    margin-top: 500px;
+    max-width: 221px;
+    width: 100%;
+    padding: 12px 0;
+    border: 4px solid rgba(255, 255, 255, 1);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    background: transparent;
+    color: rgba(255, 255, 255, 1);
+    transition: .3s all linear;
+}
+.hero-button:hover{
+    background: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+
+#about-car{
+    width: 100%;
+    padding-top: 200px;
+}
+.about-car{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+.exoskeleton,
+.corpus{
+    width: 100%;
+    display: flex;
+    gap: 42px;
+}
+.corpus{
+    flex-direction: row-reverse;
+}
+.exoskeleton-info,
+.corpus-info{
+    width: 47%;
+}
+.exoskeleton-info--title,
+.corpus-info--title{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 38.25px;    
+}
+.exoskeleton-info--text,
+.corpus-info--text{
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;    
+}
+.exoskeleton-img,
+.corpus-img{
+    width: 53%;
+}
+.exoskeleton-img img,
+.corpus-img img{
+    width: 100%;
+}
+#utility,
+#performance{
+    width: 100%;
+    padding-top: 200px;
+}
+#storage{
+    width: 100%;
+    padding-top: 80px;
+}
+#performance{
+    position: relative;
+}
+.utility-title,
+.storage-title,
+.performance-title{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 38.25px;    
+}
+.utility-text,
+.storage-text,
+.performance-text{
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px; 
+}
+.utility-img,
+.storage-img,
+.performance-img{
+    margin-top: 32px;
+    width: 100%;
+}
+
+.performance-design{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+#view-3d{
+    width: 100%;
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+.view-3d{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.view-3d img{
+    max-width: 897px;
+    width: 100%;
+}
+.waytotop{
+    right: 10px;
+    bottom: 100px;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    cursor: pointer;
+}
+.waytotop img{
+    width: 100%;
+}
+@media (max-width:576px) {
+    .container{
+        padding: 0 20px;
+    }
+    #hero{
+        height: 812px;
+        background-image: url("../images/mobile-bg-image.jpg");
+    }
+    .header{
+        padding-top: 60px;
+    }
+    .header-img{
+        max-width: 200px;
+    }
+    .hero{
+        padding-top: 148px;
+    }
+    .hero-title{
+        font-size: 18px;
+        line-height: 24.59px;        
+    }
+    .hero-button{
+        margin-top: 485px;
+        max-width: 335px;
+    }
+    .about-car{
+        padding-top: 180px;
+    }
+    .exoskeleton,.corpus{
+        flex-direction: column;
+    }
+    .exoskeleton-info,
+    .exoskeleton-img,
+    .corpus-img,
+    .corpus-info{
+        width: 100%;
+    }
+    .corpus-info--title,
+    .corpus-info--title,
+    .utility-title,
+    .storage-title,
+    .performance-title{
+        font-size: 24px;
+        line-height: 32.78px;        
+    }
+    .corpus-info--text,
+    .corpus-info--text,
+    .utility-text,
+    .storage-text,
+    .performance-text{
+        font-size: 16px;
+        line-height: 26px;
+    }
+    #utility,
+    #performance{
+        width: 100%;
+        padding-top: 180px;
+    }
+    #storage{
+        width: 100%;
+        padding-top: 70px;
+    }
+    .performance-design{
+        display: none;
+    }
+    #view-3d{
+        width: 100%;
+        padding-top: 180px;
+        padding-bottom: 127px;
+    }
+    .waytotop{
+        bottom: 50px;
+        width: 37px;
+        height: 37px;
+        right: 20px;
+    }
+}
