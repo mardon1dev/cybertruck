@@ -28,7 +28,6 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 10px;
-    position: relative;
 }
 
 body{
@@ -42,6 +41,7 @@ body{
     position: absolute;
     top: 0;
     z-index: 1;
+    /* backdrop-filter: blur(5px); */
 }
 .header{
     display: flex;
@@ -59,6 +59,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 .hero{
     padding-top: 213px;
@@ -151,6 +152,15 @@ body{
 }
 #performance{
     position: relative;
+    background-image: url("../images/design.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.utility-info,
+.storage-info,
+.performance-info{
+    max-width: 972px;
+    width: 100%;
 }
 .utility-title,
 .storage-title,
@@ -174,37 +184,40 @@ body{
     width: 100%;
 }
 
-.performance-design{
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-}
-
-#view-3d{
+footer{
     width: 100%;
-    padding-top: 200px;
-    padding-bottom: 100px;
+    height: 736px;
+    background-image: url("../images/3dsybertruck.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 897px; 
+    background-attachment: fixed;
 }
-.view-3d{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.view-3d img{
-    max-width: 897px;
-    width: 100%;
+.waytotop-wrapper{
+    position: fixed;
+    /* right: 0; */
 }
 .waytotop{
-    right: 10px;
-    bottom: 100px;
+    left: calc(90% + 0px);
+    bottom: calc(5% + 50px);
     width: 64px;
     height: 64px;
-    position: absolute;
+    position: fixed;
     cursor: pointer;
 }
 .waytotop img{
     width: 100%;
+}
+@media (max-width:768px) {
+    .exoskeleton,.corpus{
+        flex-direction: column;
+    }
+    .exoskeleton-info,
+    .exoskeleton-img,
+    .corpus-img,
+    .corpus-info{
+        width: 100%;
+    }
 }
 @media (max-width:576px) {
     .container{
@@ -228,20 +241,10 @@ body{
         line-height: 24.59px;        
     }
     .hero-button{
-        /* margin-top: 300px; */
         max-width: 335px;
     }
     .about-car{
         padding-top: 180px;
-    }
-    .exoskeleton,.corpus{
-        flex-direction: column;
-    }
-    .exoskeleton-info,
-    .exoskeleton-img,
-    .corpus-img,
-    .corpus-info{
-        width: 100%;
     }
     .corpus-info--title,
     .corpus-info--title,
@@ -264,6 +267,9 @@ body{
         width: 100%;
         padding-top: 180px;
     }
+    #performance{
+        background-image: none;
+    }
     #storage{
         width: 100%;
         padding-top: 70px;
@@ -271,15 +277,15 @@ body{
     .performance-design{
         display: none;
     }
-    #view-3d{
-        width: 100%;
-        padding-top: 180px;
-        padding-bottom: 127px;
+
+    footer{
+        background-size: 497px; 
     }
     .waytotop{
+        left: calc(80% + 0px);
         bottom: 50px;
         width: 37px;
         height: 37px;
-        right: 20px;
+        /* right: 20px; */
     }
 }
